@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'org.hoangnh'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/commons-codec/commons-codec
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.5'
+    // https://mvnrepository.com/artifact/com.fasterxml.uuid/java-uuid-generator
+    implementation group: 'com.fasterxml.uuid', name: 'java-uuid-generator', version: '4.0.1'
+    // https://mvnrepository.com/artifact/com.hazelcast/hazelcast
+    implementation group: 'com.hazelcast', name: 'hazelcast', version: '5.0'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.5'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure
+    implementation group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: '2.5.5'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.5.5'
+    // https://mvnrepository.com/artifact/io.vertx/vertx-core
+    implementation group: 'io.vertx', name: 'vertx-core', version: '4.1.4'
+    // https://mvnrepository.com/artifact/io.vertx/vertx-web
+    implementation group: 'io.vertx', name: 'vertx-web', version: '4.1.4'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
